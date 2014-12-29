@@ -1,0 +1,24 @@
+{% extends '::base.html.twig' %}
+
+{% block js %}
+    <script src="{{ asset('bundles/blog/spf.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <form method="post">
+        {{ form_row(form.login) }}
+        {{ form_row(form.openPass) }}
+        {{ form_row(form.email) }}
+        <div index="{{ form.posts|length }}" id="postsContainer" data-prototype="{{ form_widget(form.posts.vars.prototype)|e }}">
+            {% for post in form.posts %}
+                <div style="border: solid 1px lightgray">
+                    {{ form_row(post.massage,  {'attr':{'style': 'height:200px; width:100%; resize: none'} }) }}
+                    <button onclick="delPostForm(this.parentNode)">del</button>
+                </div>
+            {% endfor %}
+        </div>
+        <button onclick="addPostForm()">add post</button>
+        {{ form_row(form.ok) }}
+        {{ form_row(form._token) }}
+    </form>
+{% endblock %}

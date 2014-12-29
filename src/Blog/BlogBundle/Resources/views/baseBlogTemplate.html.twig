@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}{% endblock %}</title>
+
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    {% block stylesheets %}
+        <!---Le styles -->
+        <link href="{{ asset('bundles/my_blog/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
+        <style>
+            body {
+                padding-top: 10px;
+            }
+        </style>
+        <link href="{{ asset('bundles/my_blog/bootstrap/css/bootstrap-responsive.css')}}" rel="stylesheet">
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+
+</head>
+<body>
+{% block javascripts %}{% endblock %}
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-taerdet=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="{{ path('blog_homepage')}}">{% trans %}Блог - Мороз Тараса{% endtrans %}</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="active"><a href="{{ path('blog_index')}}">{% trans %}Головна{% endtrans %}</a></li>
+                    <li class="active"><a href="{{ path('blog_post_new')}}">{% trans %}Добавити{% endtrans %}</a></li>
+                    <li class="active"><a href="{{ path('blog_user_registration')}}">{% trans %}Реєстрація{% endtrans %}</a></li>
+                    <li class="active">
+                        <form action="{{ path('blog_post_search') }}" method="POST" class="form-search">
+                            <input type="text" name="search" class="input-medium search-query"/>
+                            <input type="submit" class="btn" value="{% trans %}Пошук{% endtrans %}"/>
+                        </form>
+                    </li>
+                    <li class="active"><a href="{{  path('blog_homepage',{_locale: "ua"})}}">Uk</a></li>
+                    <li class="active"><a href="{{  path('blog_index',{_locale: "ru"}) }}">Ru</a></li>
+                    <li class="active"><a href="{{  path('blog_index',{_locale: "en"}) }}">En</a></li>
+                </ul>
+            </div><!--/.nav-collapse-->
+        </div>
+    </div>
+</div>
+<div class="container">
+    <form action="{{ path('blog_post_search') }}" method="POST" class="form-search">
+        <input type="text" name="search" class="input-medium search-query"/>
+        <input type="submit" class="btn" value="{% trans %}Пошук{% endtrans %}"/>
+    </form>
+    {% block body %}
+        Тут повинен бути контент! Добавте його!
+    {% endblock %}
+    <div id="clear"></div>
+    <footer>
+        <p>Copyright © 2014-15 {% trans %}Блог - Мороз Тарас В. Всі права захищені{% endtrans %}.</p>
+    </footer>
+</div><!--/container-->
+</body>
+</html>

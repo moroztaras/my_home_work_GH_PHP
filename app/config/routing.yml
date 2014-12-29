@@ -1,0 +1,26 @@
+blog_blog:
+    resource: "@BlogBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+
+acme_blog:
+    resource: "@AcmeBlogBundle/Resources/config/routing.xml"
+    prefix:   /
+
+#geek_hub_home:
+#    resource: "@GeekHubHomeBundle/Resources/config/routing.xml"
+#    prefix:   /
+
+#moroz2_home:
+#    resource: "@Moroz2HomeBundle/Resources/config/routing.xml"
+#    prefix:   /
+
+#moroz_home:
+#    resource: "@MorozHomeBundle/Controller/"
+#    type:     annotation
+#    prefix:   /
+
+acme_example:
+    resource: "@AcmeExampleBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

@@ -1,0 +1,16 @@
+<tr>
+    <td>
+        5
+    </td>
+    <td>
+        10 000
+    </td>
+    <td>
+        Moroz Taras
+    </td>
+    {#
+    <td><a href="{{ path('order_detail', {'id': loop.index}) }}">{{ order.number|e }}</a></td>
+    <td>{{ order.price|price }}</td>
+    <td>{{ "owner"|upper }}</td>
+    #}
+</tr>

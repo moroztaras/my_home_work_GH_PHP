@@ -1,0 +1,27 @@
+Blog\BlogBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: Blog\BlogBundle\Entity\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        login:
+            type: string
+            length: 255
+        email:
+            type: string
+            length: 255
+        pass:
+            type: string
+            length: '32'
+        openPass:
+            type: string
+            length: 255
+        posts:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

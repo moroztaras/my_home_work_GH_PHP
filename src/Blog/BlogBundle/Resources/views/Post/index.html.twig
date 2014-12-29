@@ -1,0 +1,11 @@
+{% extends 'BlogBlogBundle::baseBlogTemplate.html.twig' %}
+{% block title %}{% trans %}Головна  сторінка - Блог{% endtrans %}{% endblock %}
+{% block body %}
+    {% for post in posts %}
+        <a href="{{ path('blog_show_post',{postId:post.id}) }}">
+            <h2>{{ post.title }}</h2>
+        </a>
+        <p>{% trans %}Автор:{% endtrans %} {{ post.author }} | {% trans %}Створено:{% endtrans %} {{post.postedDate|date("d-m-Y")}} | {% trans %}Переглядів:{% endtrans %} {{ post.counter }} | <a href="{{ path('blog_post_del',{postId:post.id}) }}">{% trans %}Видалити{% endtrans %}</a> | <a href="{{ path('blog_post_edit',{postId:post.id}) }}">{% trans %}Редагувати{% endtrans %}</a></p>
+        <p>{{ post.content }}</p>
+    {% endfor %}
+{% endblock %}

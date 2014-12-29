@@ -1,0 +1,28 @@
+{% extends 'BlogBundle::baseBlogTemplate.html.twig' %}
+
+
+{% block body %}
+    {% set isOwner = (loginedUser != null) and (loginedUser.id == postOwner.id) %}
+    {{ parent() }}
+    {% if isOwner %}
+        <a href="{{ path('show_add_post_form') }}">
+            <button>add post</button>
+        </a>
+    {% endif %}
+    {% for post in postList %}
+        <div style="border: solid 1px gainsboro">
+            {% if isOwner %}
+               <a href="{{ path('del_post', {'postId': post.id}) }}"><button>delete</button></a>
+                <a href="{{ path('show_edit_post_form', {'postId': post.id}) }}"><button>edit</button></a>
+            {% endif %}
+            <div>
+                {{ post.massage }}
+            </div>
+            <div style="margin-left:20px">posted: {{ post.postedDate|date("m/d/Y") }}</div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block title %}
+    {{ postOwner.login }}'s posts
+{% endblock %}

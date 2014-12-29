@@ -1,0 +1,26 @@
+Blog\BlogBundle\Entity\Post:
+    type: entity
+    table: null
+    repositoryClass: Blog\BlogBundle\Entity\PostRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        author:
+            type: string
+            length: 255
+            columnDefinition: varchar(255) NOT NULL DEFAULT 'MorozTaras'
+        content:
+            type: text
+        postedDate:
+            type: datetime
+        counter:
+            type: integer
+            columnDefinition: integer NOT NULL DEFAULT 0
+    lifecycleCallbacks: {  }

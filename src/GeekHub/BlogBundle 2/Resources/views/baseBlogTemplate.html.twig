@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% set loginedUser = app.session.get(constant("BlogBundle\\Consts::USER_PARAM_NAME")) %}
+{% block body %}
+    <div style="text-align: right">
+        {% if loginedUser != null %}
+            <span><a href="{{ path('show_users_posts', {'login': loginedUser.login}) }}">my page</a></span>
+            <span style="margin-left: 10px">
+                <a href="{{ path('logout') }}">
+                    <button>logout</button>
+                </a>
+            </span>
+        {% else %}
+            <a href="{{ path('show_registration_form') }}">
+                <button>registration</button>
+            </a>
+            <a href="{{ path('show_login_form') }}">
+                <button>login</button>
+            </a>
+        {% endif %}
+    </div>
+{% endblock %}

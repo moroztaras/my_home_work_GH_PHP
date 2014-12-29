@@ -1,0 +1,48 @@
+#----blog
+blog_homepage:
+    path:     /
+    defaults: { _controller: BlogBlogBundle:Post:index, _locale: ua}
+blog_index:
+    path:     /{_locale}/
+    defaults: { _controller: BlogBlogBundle:Post:index, _locale: ua }
+    requirements:
+            _locale: ua|ru|en
+#----post
+blog_post_edit:
+    path:     /{_locale}/post/edit/{postId}
+    defaults: { _controller: BlogBlogBundle:Post:showEditPostForm }
+    methods: [GET, POST]
+blog_post_del:
+    path:     /{_locale}/post/del/{postId}
+    defaults: { _controller: BlogBlogBundle:Post:delPost }
+    requirements:
+          _method: GET
+blog_post_new:
+    path:     /{_locale}/post/new
+    defaults: { _controller: BlogBlogBundle:Post:new }
+    requirements:
+          _locale: ua|ru|en
+blog_show_post:
+    path:     /{_locale}/post/{postId}
+    defaults: { _controller: BlogBlogBundle:Post:show }
+    requirements:
+      _method: GET
+
+blog_post_search:
+    path:     /post/search
+    defaults: { _controller: BlogBlogBundle:Post:searchPost }
+    requirements:
+      _method: POST
+#----user
+blog_user_registration:
+    path:     /user/registration
+    defaults: { _controller: BlogBlogBundle:User:registration }
+    requirements:
+      _method:  GET
+#----other
+#blog_blog_word:
+#    path:     /{word}
+#    defaults: { _controller: BlogBlogBundle:Post:word }
+#    requirements:
+#         _method: GET
+

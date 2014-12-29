@@ -1,0 +1,18 @@
+{# src/Acme/BlogBundle/Resources/views/Blog/index.html.twig #}
+{% extends '::base.html.twig' %}
+
+ {% block stylesheets %}
+     {{ parent() }}
+     <link href="{{ asset('bundles/geekhub/css/order.css') }}" rel="stylesheet" />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+ {% endblock %}
+{% block title %}Моя перша сторінка{% endblock %}
+
+{% block body %}
+    <table class="table">
+        <thead class="th-font">
+            <td>id</td><td>Name</td><td>Address</td><td>Phone</td>
+        </thead>
+        {{ include('AcmeBlogBundle:Blog/partials:_table_row.html.twig')}}
+    </table>
+{% endblock %}

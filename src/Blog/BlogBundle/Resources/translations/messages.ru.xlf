@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="uk" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>Головна</source>
+                <target>Главная</target>
+            </trans-unit>
+            <trans-unit id="2">
+                 <source>Добавити</source>
+                 <target>Добавить</target>
+            </trans-unit>
+            <trans-unit id="3">
+                 <source>Реєстрація</source>
+                 <target>Регистрация</target>
+            </trans-unit>
+            <trans-unit id="4">
+                  <source>Пошук</source>
+                  <target>Поиск</target>
+            </trans-unit>
+            <trans-unit id="5">
+                   <source>Головна  сторінка - Блог</source>
+                   <target>Главная страница - Блог</target>
+            </trans-unit>
+            <trans-unit id="6">
+                    <source>Автор:</source>
+                    <target>Автор:</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>Створено:</source>
+                <target>Создано:</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>Переглядів:</source>
+                <target>Просмотров:</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>Видалити</source>
+                <target>Удалить</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>Редагувати</source>
+                <target>Редактировать</target>
+            </trans-unit>
+            <trans-unit id="11">
+                 <source>Створення нового запису</source>
+                 <target>Создание новой записи</target>
+            </trans-unit>
+            <trans-unit id="12">
+                  <source>Зберегти</source>
+                  <target>Сохранить</target>
+            </trans-unit>
+            <trans-unit id="13">
+                   <source>Редагування запису</source>
+                   <target>Редактирования записи</target>
+            </trans-unit>
+            <trans-unit id="14">
+                   <source>Блог - Мороз Тараса</source>
+                   <target>Блог - Мороз Тараса</target>
+            </trans-unit>
+            <trans-unit id="15">
+                   <source>Блог - Мороз Тарас В. Всі права захищені</source>
+                   <target>Блог - Мороз Тарас В. Все права защищены</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

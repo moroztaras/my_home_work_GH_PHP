@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <form action="{{ path('register') }}" method="post">
+        {{ form_row(form.login) }}
+        {{ form_row(form.openPass) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.ok) }}
+        {{ form_row(form._token) }}
+    </form>
+{% endblock %}
+
+{% block title %}
+    registration
+{% endblock %}

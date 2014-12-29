@@ -1,0 +1,9 @@
+{% if product|length>0 %}
+    <ul>
+        {% for product in products %}
+            <li>
+                {{ prodict.title }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}

@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="uk" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>Головна</source>
+                <target>Головна</target>
+            </trans-unit>
+            <trans-unit id="2">
+                 <source>Добавити</source>
+                 <target>Добавити</target>
+            </trans-unit>
+            <trans-unit id="3">
+                 <source>Реєстрація</source>
+                 <target>Реєстрація</target>
+            </trans-unit>
+            <trans-unit id="4">
+                  <source>Пошук</source>
+                  <target>Пошук</target>
+            </trans-unit>
+            <trans-unit id="5">
+                   <source>Головна  сторінка - Блог</source>
+                   <target>Головна  сторінка - Блог</target>
+            </trans-unit>
+            <trans-unit id="6">
+                    <source>Автор:</source>
+                    <target>Автор:</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>Створено:</source>
+                <target>Створено:</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>Переглядів:</source>
+                <target>Переглядів:</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>Видалити</source>
+                <target>Видалити</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>Редагувати</source>
+                <target>Редагувати</target>
+            </trans-unit>
+            <trans-unit id="11">
+                 <source>Створення нового запису</source>
+                 <target>Створення нового запису</target>
+            </trans-unit>
+            <trans-unit id="12">
+                  <source>Зберегти</source>
+                  <target>Зберегти</target>
+            </trans-unit>
+            <trans-unit id="13">
+                   <source>Редагування запису</source>
+                   <target>Редагування запису</target>
+            </trans-unit>
+            <trans-unit id="14">
+                   <source>Блог - Мороз Тараса</source>
+                   <target>Блог - Мороз Тараса</target>
+            </trans-unit>
+            <trans-unit id="15">
+                    <source>Заголовок:</source>
+                    <target>Заголовок:</target>
+            </trans-unit>
+            <trans-unit id="16">
+                    <source>Jan</source>
+                    <target>Січень</target>
+            </trans-unit>
+            <trans-unit id="17">
+                    <source>Feb</source>
+                    <target>Лютий</target>
+            </trans-unit>
+            <trans-unit id="18">
+                    <source>Mar</source>
+                    <target>Березень</target>
+            </trans-unit>
+            <trans-unit id="19">
+                   <source>Apr</source>
+                   <target>Квітень</target>
+            </trans-unit>
+            <trans-unit id="20">
+                  <source>May</source>
+                  <target>Травень</target>
+            </trans-unit>
+            <trans-unit id="21">
+                  <source>Jun</source>
+                  <target>Червень</target>
+            </trans-unit>
+            <trans-unit id="22">
+                  <source>Jul</source>
+                  <target>Липень</target>
+            </trans-unit>
+            <trans-unit id="23">
+                  <source>Aug</source>
+                  <target>Серпень</target>
+            </trans-unit>
+            <trans-unit id="24">
+                  <source>Sep</source>
+                  <target>Вересень</target>
+             </trans-unit>
+             <trans-unit id="25">
+                  <source>Oct</source>
+                  <target>Жовтень</target>
+             </trans-unit>
+             <trans-unit id="26">
+                  <source>Nov</source>
+                  <target>Листопад</target>
+             </trans-unit>
+             <trans-unit id="27">
+                  <source>Dec</source>
+                  <target>Грудень</target>
+             </trans-unit>
+             <trans-unit id="28">
+                  <source>Блог - Мороз Тарас В. Всі права захищені</source>
+                  <target>Блог - Мороз Тарас В. Всі права захищені</target>
+             </trans-unit>
+        </body>
+    </file>
+</xliff>

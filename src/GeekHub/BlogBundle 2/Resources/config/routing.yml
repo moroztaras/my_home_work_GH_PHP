@@ -1,0 +1,79 @@
+show_registration_form:
+  pattern:  /registration
+  defaults: { _controller: BlogBundle:UserAcc:showRegistrationForm }
+  requirements:
+    _method:  GET
+
+register:
+  pattern:  /registration
+  defaults: { _controller: BlogBundle:User:register }
+  requirements:
+    _method:  POST
+
+login:
+  pattern: /login
+  defaults: { _controller: BlogBundle:UserAcc:login }
+  requirements:
+    _method:  POST
+
+logout:
+  pattern: /logout
+  defaults: { _controller: BlogBundle:UserAcc:logout }
+  requirements:
+    _method:  GET
+
+show_login_form:
+  pattern: /login
+  defaults: { _controller: BlogBundle:UserAcc:showLoginForm }
+  requirements:
+    _method:  GET
+
+show_users_posts:
+  pattern: /page/{login}
+  defaults: { _controller: BlogBundle:Post:showUsersPosts}
+
+edit_post:
+  pattern: /post/edit/{postId}
+  defaults: { _controller: BlogBundle:Post:editPost}
+  requirements:
+    _method:  POST
+
+add_post:
+  pattern: /post/add
+  defaults: { _controller: BlogBundle:Post:addPost}
+  requirements:
+    _method:  POST
+
+del_post:
+  pattern: /post/del/{postId}
+  defaults: { _controller: BlogBundle:Post:delPost}
+  requirements:
+#    _method:  POST
+    postId: \d+
+
+show_add_post_form:
+  pattern: /post/add
+  defaults: { _controller: BlogBundle:Post:showAddPostForm}
+  requirements:
+    _method:  GET
+
+show_edit_post_form:
+  pattern: /post/edit/{postId}
+  defaults: { _controller: BlogBundle:Post:showEditPostForm}
+  requirements:
+    _method:  GET
+    postId: \d+
+
+show_spf:
+  pattern: /spf/{userId}
+  defaults: { _controller: BlogBundle:SuperPuper:showSpf, userId: null}
+  requirements:
+    _method: GET
+    postId: \d+
+
+spf_act:
+  pattern: /spf/{userId}
+  defaults: { _controller: BlogBundle:SuperPuper:spfAct, userId: null}
+  requirements:
+    _method: POST
+    postId: \d+

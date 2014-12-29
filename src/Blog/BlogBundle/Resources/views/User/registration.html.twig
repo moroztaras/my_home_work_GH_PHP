@@ -1,0 +1,12 @@
+{% extends 'BlogBlogBundle::baseBlogTemplate.html.twig' %}s
+{% block title %}Реєстрація{% endblock %}
+{% block body %}
+    <form action="{{ path('blog_user_registration') }}" method="post">
+        {{ form_row(form.login) }}
+        {{ form_row(form.openPass) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.ok) }}
+        {{ form_row(form._token) }}
+    </form>
+{% endblock %}
+

@@ -1,0 +1,28 @@
+{% extends 'BlogBlogBundle::baseBlogTemplate.html.twig' %}
+{% block title %}{% trans %}Створення нового запису{% endtrans %}{% endblock %}
+{% block body %}
+    <form action="{{ path('blog_post_new') }}" method="post">
+        {{ form_errors(form) }}
+        <table>
+            <tr>
+                <td colspan="2" align="center"><strong>{% trans %}Створення нового запису{% endtrans %}</strong></td>
+            </tr>
+            <tr>
+                <td>{{ form_label(form.title, 'Заголовок:') }}</td><td>{{ form_widget(form.title) }}</td>
+            </tr>
+            <tr>
+                <td>{{ form_label(form.postedDate, 'Створено:') }}</td><td>{{ form_widget(form.postedDate) }}</td>
+            <tr>
+            <tr>
+                <td>{{ form_label(form.author, 'Автор:') }}</td><td>{{ form_widget(form.author) }}</td>
+            </tr>
+            <tr>
+                <td>{{ form_label(form.content, 'Текст:') }}</td><td>{{ form_widget(form.content) }}</td>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="{% trans %}Зберегти{% endtrans %}"></td>
+            </tr>
+        </table>
+        {{ form_rest(form) }}
+    </form>
+{% endblock %}
+
